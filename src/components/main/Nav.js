@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import logo from './Img/logo.png'
+import logo from './img/logo.png'
+import './style/Nav.css'
 
-const StatusBar = () => {
+const Nav = () => {
     const [show, handleShow] = useState(false);
 
     const transitionNavBar = () => {
@@ -15,13 +16,16 @@ const StatusBar = () => {
     }, [])
 
     return (
-        <div className='statusBar'>
-            <img
-            src={logo}
-            alt='webflix_logo'
-            />
+        <div className='Nav'>
+            <div className='NavContents'>
+                <img
+                    src={logo}
+                    alt='webflix_logo'
+                />
+                hello
+            </div>
         </div>
     );
 };
 
-export default StatusBar;
+export default Nav;
