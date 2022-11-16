@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {useLocation, Link} from "react-router-dom"
 import webflixLogo from './webflix logo.png';
+import netflix_background from './netflix_background.jpg';
 
 const User = {
   email: 'test@example.com',
@@ -53,62 +54,66 @@ export default function Login() {
     }
 
     return (
-      <div className="page">
-        <div>
-          <img className="logo" src={webflixLogo}></img>
-        </div>
-        <div className="titleWrap">
-          로그인
-        </div>
-
-        <div className="contentWrap">
-          <div className="inputTitle">이메일 주소</div>
-          <div
-            className="inputWrap"
-          >
-            <input
-              className="input"
-              type="text"
-              placeholder="test@gmail.com"
-              value={email}
-              onChange={handleEmail}
-            />
+      //<div className="background" style={{background: netflix_background}}>
+      <div>
+        <img className="background" src={netflix_background}></img>
+        <div className="page">
+          <div>
+            <img className="logo" src={webflixLogo}></img>
           </div>
-          <div className="errorMessageWrap">
-            {!emailValid && email.length > 0 && (
-              <div>올바른 이메일을 입력해주세요.</div>
-            )}
+          <div className="titleWrap">
+            로그인
           </div>
 
-          <div style={{ marginTop: "26px" }} className="inputTitle">
-            비밀번호
-          </div>
-          <div className="inputWrap">
-            <input
-              className="input"
-              type="password"
-              placeholder="영문, 숫자, 특수문자 포함 8자 이상"
-              value={pw}
-              onChange={handlePw}
-            />
-          </div>
-          <div className="errorMessageWrap">
-            {!pwValid && pw.length > 0 && (
-              <div>영문, 숫자, 특수문자 포함 8자 이상 입력해주세요.</div>
-            )}
-          </div>
-        </div>
+          <div className="contentWrap">
+            <div className="inputTitle">이메일 주소</div>
+            <div
+              className="inputWrap"
+            >
+              <input
+                className="input"
+                type="text"
+                placeholder="test@gmail.com"
+                value={email}
+                onChange={handleEmail}
+              />
+            </div>
+            <div className="errorMessageWrap">
+              {!emailValid && email.length > 0 && (
+                <div>올바른 이메일을 입력해주세요.</div>
+              )}
+            </div>
 
-        {/* 회원가입 버튼 */}
-        <div>
-          <button className="bottomButton">
-            <Link to="signup" style={{ textDecoration: "none", color: "white"}}>회원가입</Link>
-          </button>
-        </div>
-        <div>
-          <button onClick={onClickConfirmButton} disabled={notAllow} className="bottomButton">
-            확인
-          </button>
+            <div style={{ marginTop: "26px" }} className="inputTitle">
+              비밀번호
+            </div>
+            <div className="inputWrap">
+              <input
+                className="input"
+                type="password"
+                placeholder="영문, 숫자, 특수문자 포함 8자 이상"
+                value={pw}
+                onChange={handlePw}
+              />
+            </div>
+            <div className="errorMessageWrap">
+              {!pwValid && pw.length > 0 && (
+                <div>영문, 숫자, 특수문자 포함 8자 이상 입력해주세요.</div>
+              )}
+            </div>
+          </div>
+
+          <div>
+            <button onClick={onClickConfirmButton} disabled={notAllow} className="signinButton">
+              확인
+            </button>
+          </div>
+          {/* 회원가입 버튼 */}
+          <div>
+            <button className="signinButton">
+              <Link to="signup" style={{ textDecoration: "none", color: "white"}}>회원가입</Link>
+            </button>
+          </div>
         </div>
       </div>
     );
