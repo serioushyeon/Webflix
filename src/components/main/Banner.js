@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import './style/Banner.css';
 
 const Banner = () => {
 
     return (
         <div className='banner'>
-            <p>hello this is Banner</p>
         </div>
     )
 };

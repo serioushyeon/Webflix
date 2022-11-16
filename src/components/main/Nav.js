@@ -1,30 +1,18 @@
-import React, { useEffect, useState } from 'react';
 import logo from './img/logo.png'
 import './style/Nav.css'
 
-const Nav = () => {
-    const [show, handleShow] = useState(false);
-
-    const transitionNavBar = () => {
-        if (window.scrollY > 100) handleShow(true);
-        else handleShow(false);
-    }
-
-    useEffect(() => { // 화면 scroll 길이가 늘어나면 상태바 보임
-        window.addEventListener("scroll", transitionNavBar);
-        return () => window.removeEventListener("scroll", transitionNavBar);
-    }, [])
-
+const Nav = ({ black }) => {
     return (
-        <div className='Nav'>
-            <div className='NavContents'>
-                <img
-                    src={logo}
-                    alt='webflix_logo'
-                />
-                hello
+        <header className={black ? 'black' : ''}>
+            <div className="header--logo">
+                <a href="/">
+                    <img src={logo} alt="Wetflix" />
+                </a>
             </div>
-        </div>
+            <div className="header--user">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="User" />
+            </div>
+        </header>
     );
 };
 
