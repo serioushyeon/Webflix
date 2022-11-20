@@ -1,0 +1,71 @@
+.LectureRow {
+    margin-bottom: 30px;
+}
+
+.LectureRow h2 {
+    margin: 0px 0px 0px 30px;
+}
+
+.LectureRow--listarea {
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+
+.LectureRow--list {
+    width: 99999px;
+    transition: all ease 0.3s;
+}
+.LectureRow--item {
+    display: inline-block;
+    width: 200px;
+    cursor: pointer;
+}
+
+.LectureRow--item img {
+    width: 100%;
+    transform: scale(0.93);
+    transition: 0.3s all ease;
+}
+
+.LectureRow--item img:hover {
+    transform: scale(1);
+}
+
+.LectureRow--left,
+.LectureRow--right {
+    position: absolute;
+    width: 40px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+
+.LectureRow:hover .movieRow--left, 
+.LectureRow:hover .movieRow--right {
+    opacity: 1;
+}
+
+.LectureRow--left {
+    left: 0;
+}
+
+.LectureRow--right {
+    right: 0;
+}
+
+@media (max-width:760px){
+    .LectureRow--left,
+    .LectureRow--right {
+        opacity: 1;
+    }
+
+    .LectureRow--right{
+        margin-right: 1vh;
+    }
+}

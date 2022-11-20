@@ -1,4 +1,3 @@
-import logo from './img/logo.png'
 import './style/Nav.css'
 
 const Nav = ({ black }) => {
@@ -6,7 +5,7 @@ const Nav = ({ black }) => {
         <header className={black ? 'black' : ''}>
             <div className="header--logo">
                 <a href="/">
-                    <img src={logo} alt="Wetflix" />
+                    <img src="img/logo.png" alt="Wetflix" />
                 </a>
             </div>
             <div className="header--user">
