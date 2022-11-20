@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {useLocation, Link} from "react-router-dom"
 import webflixLogo from './webflix logo.png';
-import netflix_background from './netflix_background.jpg';
+import background from './background.jpg';
 
 const User = {
   email: 'test@example.com',
@@ -56,7 +56,7 @@ export default function Login() {
     return (
       //<div className="background" style={{background: netflix_background}}>
       <div>
-        <img className="background" src={netflix_background}></img>
+        <img className="background" src={background}></img>
         <div className="page">
           <div>
             <img className="logo" src={webflixLogo}></img>
