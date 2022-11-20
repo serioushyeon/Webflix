@@ -10,8 +10,8 @@ const Banner = ({item}) => {
     }
 
     let description = item.description;
-    if(description.length > 200) {
-        description = description.substring(0, 200)+'...';
+    if(description.length > 100) {
+        description = description.substring(0, 100)+'...';
     }
 
     return (
