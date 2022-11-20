@@ -54,6 +54,10 @@ const HomeScreen = () => {
                 <Lecture title={"전공 강의"} items={majorList} />
                 <Lecture title={"교양 강의"} items={generalList} />
             </section>
+            <footer>
+                Lecture introduction homepage ❤️ Webflix By <strong><a href="https://github.com/seriouhyeon/Webflix" target="_blank">Reaction</a></strong><br />
+                Design Reference <a href="https://netflix.com" target="_blank"><strong>Netflix</strong></a><br />
+            </footer>
         </div>
     )
 };
