@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './style/Lecture.css';
 
 const Lecture = ({ title, items }) => {
-
     const [scrollX, setScrollX] = useState(0);
 
     const handleLeftArrow = () => {
@@ -35,9 +34,9 @@ const Lecture = ({ title, items }) => {
                 <div className="lectureRow--list" style={{
                     marginLeft: scrollX,
                 }}>
-                    {items.length > 0 && items.map((item, key) => (
+                    {items.length > 0 && items.map((lecture, key) => (
                         <div key={key} className="lectureRow--item">
-                            <img src={`${item.img}`} />
+                            <img src={`${lecture.img}`} />
                         </div>
                     ))}
                 </div>

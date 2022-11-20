@@ -4,10 +4,6 @@ import './style/Banner.css';
 const Banner = ({item}) => {
 
     let firstDate = new Date(item.first_air_date);
-    let genres = [];
-    for(let i in item.genres) {
-        genres.push(item.genres[i].name)
-    }
 
     let description = item.description;
     if(description.length > 100) {
@@ -18,7 +14,7 @@ const Banner = ({item}) => {
         <section className="featured" style={{
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`
+            backgroundImage: `url(${item.img})`
         }}>
             <div className="featured--vertical">
                 <div className="featured--horizontal">
