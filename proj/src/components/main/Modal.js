@@ -6,22 +6,21 @@ const Modal = ({onClose, lecture}) => {
   const title = lecture.title;
   const classDes = lecture.description;
   const track = lecture.track;
-  const grade = "3학년";
-  const num = "3학점";
-  const extra = "..";
+  const grade = lecture.grade;
+  const credit = lecture.credit;
   return(
     <ModalPortal>
       <Background>
         <Content>
           <ImageThumbnail style={{
-            background: `linear-gradient(to top, #111 20%, transparent 70%), url(${lecture.img})`,
+            background: `linear-gradient(to top, #111 0%, transparent 70%), url(${lecture.img})`,
             backgroundSize: 'cover',
             backgroundRepeat : 'no-repeat',
             backgroundPosition: 'center'
             }}>
           </ImageThumbnail>
             <ContentInfo>
-            <CloseBtn className="featured--myCloseButton"onClick={onClose}>X</CloseBtn>
+            <CloseBtn className="featured--myCloseButton" onClick={onClose}>X</CloseBtn>
             <ButtonLeft>
             <div className="featured--buttons">
               <a className="featured--watchButton" href={`/`}>♥</a>
@@ -36,14 +35,12 @@ const Modal = ({onClose, lecture}) => {
                 <H4>{classDes}</H4>
               </ContentDetailLeft>
               <ContentDetailRight>
-                <Right></Right>
-                <H4>{track}</H4>
-                <H4>학점: {num}</H4>
+                <Right>{track}</Right>
+                <H4>학점: {credit}</H4>
                 <H4>대상: {grade}</H4>
               </ContentDetailRight>
             </ContentDetail>
           </ContentInfo>
-          <H2>{extra}</H2>
         </Content>
       </Background>
     </ModalPortal>
@@ -67,7 +64,7 @@ const Modal = ({onClose, lecture}) => {
 
 const ImageThumbnail = styled.div`
 width :100%;
-height:500px;
+height:450px;
 `
 const Content = styled.div`
   z-index: 1001;
