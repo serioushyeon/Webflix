@@ -1,16 +1,9 @@
-/**
- * proj_path: ch06/ex/proj/sample-prj
- * ./src/App.js
- */
+import React from 'react';
+import HomeScreen from "./components/main/HomeScreen";
+import './App.css';
 
-// import data and module
-import Modal from "./components/Modal";
+const App = () => (
+  <HomeScreen />
+);
 
-function App() {
-  return (
-      <Modal/>
-  );
-}
-
-// export module
 export default App;
