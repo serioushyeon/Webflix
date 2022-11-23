@@ -60,6 +60,7 @@ const Modal = ({onClose, lecture}) => {
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color : rgba(0,0,0,0.5);
 `;
 
 const ImageThumbnail = styled.div`

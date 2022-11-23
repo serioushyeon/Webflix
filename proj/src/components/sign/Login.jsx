@@ -46,6 +46,7 @@ export default function Login() {
     const onClickConfirmButton = () => {
       if(email === User.email && pw === User.pw) {
         alert('로그인에 성공했습니다.')
+        location.href="http://localhost:3000/homescreen";
       } else {
         alert("등록되지 않은 회원입니다.");
       }
@@ -54,7 +55,7 @@ export default function Login() {
     return (
       //<div className="background" style={{background: netflix_background}}>
       <div>
-        <img className="background" src="img/background.jpg" alt="Wetflix_background"></img>
+        <img className="background" src="img/background.jpg" style={{ opacity : "0.5"}}alt="Wetflix_background"></img>
         <div className="page">
           <div>
             <img className="logo" src="img/logo.png" alt="Wetflix_logo"></img>

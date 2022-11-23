@@ -6,12 +6,11 @@ import {Route, Routes} from 'react-router-dom';
 import './App.css';
 
 const App = () => (
-  <HomeScreen />
-  // <Routes>
-  //   <Route path="/" element={<Login />}/>
-  //   <Route path="/signup" element={<Signup />}/>
-  //   <Route path="/homescreen" element={<HomeScreen />} />
-  // </Routes>
+  <Routes>
+    <Route path="/" element={<Login />}/>
+    <Route path="/signup" element={<Signup />}/>
+    <Route path="/homescreen" element={<HomeScreen />}/>
+  </Routes>
 );
 
 export default App;
