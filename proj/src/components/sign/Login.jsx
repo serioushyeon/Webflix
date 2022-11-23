@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {useLocation, Link} from "react-router-dom"
+import {useLocation, Link, Router} from "react-router-dom"
 import HomeScreen from '../main/HomeScreen'
 const User = {
   email: 'test@example.com',
@@ -13,7 +13,7 @@ export default function Login() {
     const [emailValid, setEmailValid] = useState(false);
     const [pwValid, setPwValid] = useState(false);
     const [notAllow, setNotAllow] = useState(true);
-
+    
 
     useEffect(() => {
       if(emailValid && pwValid) {
@@ -46,7 +46,6 @@ export default function Login() {
     const onClickConfirmButton = () => {
       if(email === User.email && pw === User.pw) {
         alert('로그인에 성공했습니다.')
-        setGoHome(true);
       } else {
         alert("등록되지 않은 회원입니다.");
       }
