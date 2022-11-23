@@ -11,11 +11,9 @@ header {
     padding: 0 30px;
     background-color: transparent;
     transition: 0.5s all ease;
-}
-
-header.black {
     background-color: #141414;
 }
+
 .header--logo {
     height: 40px;
 }
@@ -33,7 +31,25 @@ header.black {
 }
 
 .search-window {
-    height: 30px;
+    border: 1.5px solid white;
+    width: 225px;
+    display: inline-block;
     position: relative;
-    left: 550px;
+    left: 530px;
+    padding: 5px;
+}
+
+i, input {
+    color: white;
+    display: inline;
+}
+
+input:focus {
+    outline: none;
+}
+
+#search {
+    background-color: #141414;;
+    border: 0px solid #141414;
+    width: 180px;
 }

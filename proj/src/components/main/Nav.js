@@ -1,8 +1,8 @@
 import './style/Nav.css'
 
-const Nav = ({ black }) => {
+const Nav = () => {
     return (
-        <header className={black ? 'black' : ''}>
+        <header>
             <div className="header--logo">
                 <a href="/">
                     <img src="img/logo.png" alt="Wetflix_logo" />

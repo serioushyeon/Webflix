@@ -6,7 +6,6 @@ import Data from './Data';
 import './style/HomeScreen.css';
 
 const HomeScreen = () => {
-    const [header, setHeader] = useState(false);
     const [bannerLecture, setBannerLectrue] = useState(Data[0]);
     const [voteTopList, setVoteTopList] = useState(Data);
     const [majorList, setMajorList] = useState(Data);
@@ -27,25 +26,13 @@ const HomeScreen = () => {
     }, []);
 
     useEffect(() => {
-        const scollListener = () => {
-            if (window.screenY > 10) setHeader(true);
-            else setHeader(false);
-        }
-        window.addEventListener('scroll', scollListener);
-
-        return () => {
-            window.removeEventListener('scroll', scollListener)
-        }
-    }, []);
-
-    useEffect(() => {
         let choosen = Math.floor(Math.random() * 12);
         setBannerLectrue(Data[choosen]);
     }, []);
 
     return (
         <div className='homeScreen'>
-            <Nav black={header} />
+            <Nav />
             <div className='banner'>
                 <Banner item={bannerLecture} />
             </div>
