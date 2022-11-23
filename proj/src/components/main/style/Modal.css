@@ -1,0 +1,61 @@
+.image-box {
+    width:960px;
+    height:500px;
+    overflow:hidden;
+    margin:0 auto;
+}
+
+.image-thumbnail {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+.featured--buttons {
+    margin-top: 15px;
+}
+
+.featured--watchButton,
+.featured--myListButton {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    opacity: 1;
+    transition: 0.3s all ease;
+}
+.featured--watchButton:hover,
+.featured--myListButton:hover {
+    opacity: 0.7;
+}
+
+.featured--watchButton {
+    background-color: #FFF;
+    color: #000;
+}
+
+.featured--myListButton {
+    background-color: #333;
+    color: #FFF;
+}
+
+
+.featured--myCloseButton {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    opacity: 1;
+    transition: 0.3s all ease;
+}
+.featured--myCloseButton {
+    background-color: #333;
+    color: #FFF;
+}
+.featured--myCloseButton:hover {
+    opacity: 0.7;
+}
