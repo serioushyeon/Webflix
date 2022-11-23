@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import {useLocation, Link} from "react-router-dom"
-import webflixLogo from './webflix logo.png';
-import background from './background.jpg';
 
 const User = {
   email: 'test@example.com',
@@ -79,10 +77,10 @@ export default function Signup() {
 
     return (
       <div>
-        <img className="background" src={background}></img>
+        <img className="background" src="img/background.jpg" alt="background_logo"></img>
         <div className="page">
           <div>
-            <img className="logo" src={webflixLogo}></img>
+            <img className="logo" src="img/logo.png" alt="Wetflix_logo"></img>
           </div>
           <div className="titleWrap">
             회원가입

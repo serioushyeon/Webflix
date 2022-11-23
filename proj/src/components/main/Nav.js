@@ -5,7 +5,7 @@ const Nav = ({ black }) => {
         <header className={black ? 'black' : ''}>
             <div className="header--logo">
                 <a href="/">
-                    <img src="img/logo.png" alt="Wetflix" />
+                    <img src="img/logo.png" alt="Wetflix_logo" />
                 </a>
             </div>
             <div className="header--user">
