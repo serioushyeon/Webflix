@@ -4,7 +4,7 @@ const Nav = () => {
     return (
         <header>
             <div className="header--logo">
-                <a href="/">
+                <a href="/homescreen">
                     <img src="img/logo.png" alt="Wetflix_logo" />
                 </a>
             </div>

@@ -23,8 +23,8 @@ const Modal = ({onClose, lecture}) => {
             <CloseBtn className="featured--myCloseButton" onClick={onClose}>X</CloseBtn>
             <ButtonLeft>
             <div className="featured--buttons">
-              <a className="featured--watchButton" href={`/`}>♥</a>
-              <a className="featured--myListButton" href={`/`}>+ My List</a>
+              <a className="featured--watchButton" href={`/homescreen`}>♥</a>
+              <a className="featured--myListButton" href={`/homescreen`}>+ My List</a>
             </div>
             </ButtonLeft>
             <Title>
