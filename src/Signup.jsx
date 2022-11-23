@@ -2,20 +2,19 @@ import React, { useEffect, useState } from 'react'
 import {useLocation, Link} from "react-router-dom"
 import webflixLogo from './webflix logo.png';
 import background from './background.jpg';
-
-const User = {
-  email: 'test@example.com',
-  pw: 'test2323@@@'
-}
+//import idpws from './idpw'
+import login, { idpws } from './Login'
 
 
 export default function Signup() {
     const [email, setEmail] = useState('');
     const [pw, setPw] = useState('');
+    const [name, setName] = useState('');
     const [pwConfirm, setPwConfirm] = useState('');
 
     const [emailValid, setEmailValid] = useState(false);
     const [pwValid, setPwValid] = useState(false);
+    const [nameValid, setNameValid] = useState(false);
     const [pwConfirmValid, setpwConfirmValid] = useState(false); // 비밀번호 확인
     const [notAllow, setNotAllow] = useState(true);
     // const [account, setAccount] = useState({
@@ -24,12 +23,12 @@ export default function Signup() {
     // });
 
     useEffect(() => {
-      if(emailValid && pwValid && pwConfirmValid) {
+      if(emailValid && pwValid && pwConfirmValid && nameValid) {
         setNotAllow(false);
         return;
       }
       setNotAllow(true);
-    }, [emailValid, pwValid, pwConfirmValid]);
+    }, [emailValid, pwValid, pwConfirmValid, nameValid]);
 
     const handleEmail = (e) => {
       setEmail(e.target.value);
@@ -43,6 +42,15 @@ export default function Signup() {
         setEmailValid(true);
       } else {
         setEmailValid(false);
+      }
+    };
+    const handleName = (e) => {
+      setName(e.target.value);
+      
+      if (name.length > 0) {
+        setNameValid(true);
+      } else {
+        setNameValid(false);
       }
     };
     const handlePw = (e) => {
@@ -70,11 +78,16 @@ export default function Signup() {
       }
     };
     const onClickConfirmButton = () => {
-      if(email === User.email && pw === User.pw) {
-        alert('로그인에 성공했습니다.')
-      } else {
-        alert("등록되지 않은 회원입니다.");
-      }
+      // User.email = email;
+      // User.pw = pw;
+      // if(email === User.email && pw === User.pw) {
+      //   alert('로그인에 성공했습니다.' + User.email + ", " + User.pw)
+      // } else {
+      //   alert("등록되지 않은 회원입니다.");
+      // }
+      alert("회원가입 성공, name: " + name + ", email: " + email + ", pw: " + pw);
+      idpws.push({"email": email, "pw": pw, "name": name})
+      console.log(idpws);
     }
 
     return (
@@ -114,10 +127,15 @@ export default function Signup() {
               <input
                 className="input"
                 type="text"
-                //placeholder="한 글자 이상 입력"
-                //value={email}
-                //onChange={handleEmail}
+                value={name}
+                placeholder="2자 이상"
+                onChange={handleName}
               />
+            </div>
+            <div className="errorMessageWrap">
+              {!nameValid && name.length > 0 && (
+                <div>이름을 두 글자 이상 입력해주세요.</div>
+              )}
             </div>
 
             <div style={{ marginTop: "13px" }} className="inputTitle">
