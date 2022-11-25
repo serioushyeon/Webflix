@@ -14,7 +14,9 @@ const Nav = () => {
                     <span id="delete-icon"><i className="fas fa-times-circle"></i></span>
                 </div>
             <div className="header--user">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="User" />
+                <a href='/profile'>
+                    <img src="http://occ-0-3996-1361.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY5cwIbM7shRfcXmfQg98cqMqiZZ8sReZnj4y_keCAHeXmG_SoqLD8SXYistPtesdqIjcsGE-tHO8RR92n7NyxZpqcFS80YfbRFz.png?r=229" alt="User" />
+                </a>
             </div>
         </header>
     );

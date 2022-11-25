@@ -3,6 +3,7 @@ import HomeScreen from "./components/main/HomeScreen";
 import Login from "./components/sign/Login";
 import Signup from "./components/sign/Signup";
 import {Route, Routes} from 'react-router-dom';
+import Profile from './components/Profile/Profile';
 import './App.css';
 
 const App = () => (
@@ -10,6 +11,7 @@ const App = () => (
     <Route path="/" element={<Login />}/>
     <Route path="/signup" element={<Signup />}/>
     <Route path="/homescreen" element={<HomeScreen />}/>
+    <Route path="/profile" element={<Profile/>}/>
   </Routes>
 );
 
