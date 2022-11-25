@@ -22,7 +22,6 @@ header {
 
 .header--user {
     height: 35px;
-    margin-left: 10px;
 }
 
 .header--user img {
@@ -35,7 +34,7 @@ header {
     background-color: #141414;
     width: 225px;
     display: inline-block;
-    margin-left: 715px;
+    margin-left: 725px;
     padding: 5px;
 }
 

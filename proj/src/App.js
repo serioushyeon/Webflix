@@ -1,6 +1,6 @@
 import React from 'react';
 import Search from "./components/details/Search";
-import Profile from "./components/Profile/Profile";
+import Profile from "./components/details/Profile";
 import Favorite from "./components/details/Favorite";
 import HomeScreen from "./components/main/HomeScreen";
 import Login from "./components/sign/Login";
