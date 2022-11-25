@@ -1,4 +1,4 @@
-import '../main/style/Profile.css'
+import '../style/Profile.css'
 import Nav from '../main/Nav'
 const Profile = () => {
     return (

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './style/Lecture.css';
+import '../style/Lecture.css';
 import Modal from './Modal';
 import ModalPortal from "./Portal";
 

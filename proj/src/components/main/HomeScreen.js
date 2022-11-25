@@ -3,7 +3,7 @@ import Nav from './Nav';
 import Banner from './Banner';
 import Lecture from './Lecture';
 import Data from './Data';
-import './style/HomeScreen.css';
+import '../style/HomeScreen.css';
 
 const HomeScreen = () => {
     const [bannerLecture, setBannerLectrue] = useState(Data[0]);

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ModalPortal from "./Portal";
-import './style/Modal.css';
+import '../style/Modal.css';
 
 const Modal = ({onClose, lecture}) => {
   const title = lecture.title;
