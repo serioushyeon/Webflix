@@ -1,0 +1,79 @@
+body {
+    background-color: black;
+}
+        
+.search-window {
+    border: 1.5px solid white;
+    width: 360px;
+    height: 30px;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    bottom: 10px;
+    left: 550px;
+}
+
+i, input {
+    color: white;
+    display: inline;
+}
+
+input:focus {
+    outline: none;
+}
+
+.lectures {
+    border-spacing: 30px;
+}
+
+#search-icon {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+}
+
+#search {
+    position: absolute;
+    background-color: black;
+    border: 0px solid black;
+    width: 300px;
+    height: 26px;
+    left: 26px; 
+}
+
+#delete-icon {
+    position: absolute;
+    top: 4px;
+    right: 5px;
+}
+
+.myFavoriteLecture {
+    color: white;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.profile {
+    display: inline-block;
+    position: relative;
+    bottom: 53px;
+    left: 610px;
+}
+
+#profile-icon-blue {
+    position: absolute;
+}
+
+.search-results {
+    text-align: center;
+}
+
+.img-table {
+    display: inline-block;
+    padding-top: 40px;
+}
+
+.table {
+    border-spacing: 30px 35px;
+}
