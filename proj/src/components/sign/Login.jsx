@@ -75,6 +75,7 @@ export default function Login() {
                 placeholder="test@gmail.com"
                 value={email}
                 onChange={handleEmail}
+                style = {{ color: "black" }}
               />
             </div>
             <div className="errorMessageWrap">
@@ -93,6 +94,7 @@ export default function Login() {
                 placeholder="영문, 숫자, 특수문자 포함 8자 이상"
                 value={pw}
                 onChange={handlePw}
+                style = {{ color: "black" }}
               />
             </div>
             <div className="errorMessageWrap">

@@ -1,4 +1,5 @@
 import React from 'react';
+import Favorite from "./components/details/Favorite";
 import HomeScreen from "./components/main/HomeScreen";
 import Login from "./components/sign/Login";
 import Signup from "./components/sign/Signup";
@@ -10,6 +11,7 @@ const App = () => (
     <Route path="/" element={<Login />}/>
     <Route path="/signup" element={<Signup />}/>
     <Route path="/homescreen" element={<HomeScreen />}/>
+    <Route path="/favorite" element={<Favorite />}/>
   </Routes>
 );
 

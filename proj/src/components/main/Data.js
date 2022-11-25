@@ -8,6 +8,7 @@ const Data = [
         section: "major",
         credit: "3학점",
         grade: "3학년",
+        favorite: true,
     },
     {
         title: "가상현실",
@@ -18,6 +19,8 @@ const Data = [
         section: "major",
         credit: "3학점",
         grade: "3학년",
+        favorite: true,
+
     },
     {
         title: "네트워크 프로그래밍",
@@ -28,6 +31,8 @@ const Data = [
         section: "major",
         credit: "3학점",
         grade: "3학년",
+        favorite: false,
+
     },
     {
         title: "웹서버 프로그래밍",
@@ -38,6 +43,8 @@ const Data = [
         section: "major",
         credit: "3학점",
         grade: "3학년",
+        favorite: false,
+
     },
     {
         title: "알고리즘",
@@ -48,6 +55,8 @@ const Data = [
         section: "major",
         credit: "3학점",
         grade: "2학년",
+        favorite: true,
+
     },
     {
         title: "객제지향언어2",
@@ -58,6 +67,8 @@ const Data = [
         section: "major",
         credit: "3학점",
         grade: "2학년",
+        favorite: true,
+
     },
     {
         title: "모바일&스마트 시스템",
@@ -68,6 +79,8 @@ const Data = [
         section: "major",
         credit: "3학점",
         grade: "2학년",
+        favorite: false,
+
     },
     {
         title: "설계패턴",
@@ -78,6 +91,8 @@ const Data = [
         section: "major",
         credit: "3학점",
         grade: "3학년",
+        favorite: false,
+
     },
     {
         title: "고급 모바일 프로그래밍",
@@ -88,6 +103,8 @@ const Data = [
         section: "major",
         credit: "3학점",
         grade: "3학년",
+        favorite: false,
+
     },
     {
         title: "빅데이터 기초",
@@ -98,6 +115,8 @@ const Data = [
         section: "major",
         credit: "3학점",
         grade: "2학년",
+        favorite: false,
+
     },
     {
         title: "시스템 프로그래밍",
@@ -108,6 +127,8 @@ const Data = [
         section: "major",
         credit: "3학점",
         grade: "3학년",
+        favorite: false,
+
     },
     {
         title: "인공지능",
@@ -118,6 +139,8 @@ const Data = [
         section: "major",
         credit: "3학점",
         grade: "4학년",
+        favorite: false,
+
     },
     {
         title: "K-댄스",
@@ -128,6 +151,8 @@ const Data = [
         section: "general",
         credit: "3학점",
         grade: "3학년",
+        favorite: false,
+
     },
     {
         title: "글로벌 노마드와 여행",
@@ -138,6 +163,8 @@ const Data = [
         section: "general",
         credit: "3학점",
         grade: "전학년",
+        favorite: false,
+
     },
     {
         title: "응급구조와 안전관리",
@@ -148,6 +175,8 @@ const Data = [
         section: "general",
         credit: "3학점",
         grade: "전학년",
+        favorite: false,
+
     },
     {
         title: "사건으로 본 역사",
@@ -158,6 +187,8 @@ const Data = [
         section: "general",
         credit: "3학점",
         grade: "전학년",
+        favorite: true,
+
     },
     {
         title: "사랑과 가족",
@@ -168,6 +199,8 @@ const Data = [
         section: "general",
         credit: "3학점",
         grade: "전학년",
+        favorite: false,
+
     },
     {
         title: "우리 시대의 문학 읽기",
@@ -178,6 +211,8 @@ const Data = [
         section: "general",
         credit: "3학점",
         grade: "전학년",
+        favorite: false,
+
     },
     {
         title: "공감 클래식",
@@ -188,6 +223,8 @@ const Data = [
         section: "general",
         credit: "3학점",
         grade: "전학년",
+        favorite: false,
+
     },
     {
         title: "영미 고전 읽기",
@@ -198,6 +235,8 @@ const Data = [
         section: "general",
         credit: "3학점",
         grade: "전학년",
+        favorite: false,
+
     },
     {
         title: "심리학으로 세상 읽기",
@@ -208,6 +247,8 @@ const Data = [
         section: "general",
         credit: "3학점",
         grade: "전학년",
+        favorite: false,
+
     },
     {
         title: "전쟁과 스토리텔링",
@@ -218,6 +259,8 @@ const Data = [
         section: "general",
         credit: "3학점",
         grade: "전학년",
+        favorite: true,
+
     },
     {
         title: "상상력 이노베이터",
@@ -228,6 +271,8 @@ const Data = [
         section: "general",
         credit: "3학점",
         grade: "전학년",
+        favorite: false,
+
     },
     {
         title: "자연계에 숨은 물리법칙",
@@ -238,6 +283,8 @@ const Data = [
         section: "general",
         credit: "3학점",
         grade: "전학년",
+        favorite: true,
+
     }
 ];
 

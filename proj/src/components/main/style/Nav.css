@@ -6,16 +6,15 @@ header {
     right: 0;
     height: 60px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
     background-color: transparent;
     transition: 0.5s all ease;
-    background-color: #141414;
 }
 
 .header--logo {
     height: 40px;
+    margin-left: 20px;
+    margin-right: 50px;
 }
 .header--logo img {
     height: 100%;
@@ -23,6 +22,7 @@ header {
 
 .header--user {
     height: 35px;
+    margin-left: 10px;
 }
 
 .header--user img {
@@ -31,11 +31,11 @@ header {
 }
 
 .search-window {
-    border: 1.5px solid white;
+    border: 1.5px solid #141414;
+    background-color: #141414;
     width: 225px;
     display: inline-block;
-    position: relative;
-    left: 530px;
+    margin-left: 715px;
     padding: 5px;
 }
 
@@ -51,5 +51,18 @@ input:focus {
 #search {
     background-color: #141414;;
     border: 0px solid #141414;
-    width: 180px;
+    width: 166px;
+}
+
+#search-icon {
+    padding: 4px;
+}
+
+#delete-icon {
+    padding: 3px;
+}
+
+a {
+    position: relative;
+    padding: 10px;
 }
