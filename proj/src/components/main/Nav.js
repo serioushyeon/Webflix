@@ -10,7 +10,7 @@ const Nav = () => {
             </div>
             <div className="header--link">
                 <a href="/homescreen"style={{ textDecoration: "none", color: "white"}}>홈</a>
-                <a href="/favorite" style={{ textDecoration: "none", color: "white"}}>내가 찜한 콘텐츠</a>
+                <a href="/mylist" style={{ textDecoration: "none", color: "white"}}>내가 찜한 콘텐츠</a>
                 <a href="https://info.hansung.ac.kr/" style={{ textDecoration: "none", color: "white"}}>종합정보시스템</a>
 
             </div>

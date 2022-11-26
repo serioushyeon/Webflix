@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import "../style/FavoriteLectures.css"
+import "../style/MyList.css"
 import Data from '../main/Data'
-import Nav from "../main/Nav"
 
-const FavoriteLectures = () => {
-    const [FavoriteLectureList, setFavoriteLectureList] = useState(Data);
+const MyList = () => {
+    const [myLectures, setmyLectures] = useState(Data);
     useEffect(() => {
-        let list = Data.filter((lecture) => lecture.vote_average >= 50);
-        setFavoriteLectureList(list);
+        let list = Data.filter((lecture) => lecture.myList === true);
+        setmyLectures(list);
     }, []);
 
     // 찜한 강의
-    const favoriteLecture = () => {
+    const myLecture = () => {
         const result = [];
         const oneLine = [];
         var count = 0;
         for (let i = 0; i < Data.length; i++) {
-            if (Data[i].favorite) {
+            if (Data[i].myList) {
                 count++
                 result.push(<td><img src={Data[i].img} /></td>);
                 if (count%6 == 0) {
@@ -32,11 +31,11 @@ const FavoriteLectures = () => {
     return (
         <>
             <Nav />
-            <div className='myFavoriteLecturePage'>
-                <div className="myFavoriteLecture">내가 찜한 강의</div>
+            <div className='myListPage'>
+                <div className="myLecture">내가 찜한 강의</div>
                 <div className="img-table">
                     <table className="table">
-                        <div>{favoriteLecture()}</div>
+                        <div>{myLecture()}</div>
                     </table>
                 </div>
             </div>
@@ -44,4 +43,4 @@ const FavoriteLectures = () => {
     );
 }
 
-export default FavoriteLectures;
+export default MyList;

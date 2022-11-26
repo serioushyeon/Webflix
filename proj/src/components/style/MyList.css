@@ -4,11 +4,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.myFavoriteLecturePage {
+.myListPage {
     margin-top: 150px;
 }
 
-.myFavoriteLecture {
+.myLecture {
     color: white;
     font-size: 27px;
     margin-left: 60px;

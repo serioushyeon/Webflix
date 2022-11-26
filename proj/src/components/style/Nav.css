@@ -13,7 +13,7 @@ header {
 
 .header--logo {
     height: 40px;
-    margin-top: 7px;
+    margin-top: px;
     margin-left: 20px;
     margin-right: 50px;
 }
@@ -22,6 +22,8 @@ header {
 }
 
 .header--user {
+    position: absolute;
+    margin-left: 96%;
     height: 35px;
 }
 
@@ -35,8 +37,9 @@ header {
     background-color: #141414;
     width: 225px;
     display: inline-block;
-    margin-left: 725px;
+    margin-left: 81%;
     padding: 5px;
+    position: absolute;
 }
 
 i, input {
@@ -62,7 +65,10 @@ input:focus {
     padding: 3px;
 }
 
+.header--link {
+    width: 310px;
+}
+
 a {
-    position: relative;
     padding: 10px;
 }

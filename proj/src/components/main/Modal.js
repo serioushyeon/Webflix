@@ -2,30 +2,44 @@ import styled from "styled-components";
 import ModalPortal from "./Portal";
 import '../style/Modal.css';
 
-const Modal = ({onClose, lecture}) => {
+const Modal = ({ onClose, lecture, onPlusFavorite = f => f, onPlusMyList = f => f }) => {
   const title = lecture.title;
   const classDes = lecture.description;
   const track = lecture.track;
   const grade = lecture.grade;
   const credit = lecture.credit;
-  return(
+
+  let favorite = "♡"
+  let myList = "+ My List"
+
+  if (lecture.favorite) {
+    favorite = "♥"
+  }
+
+  if (lecture.myList) {
+    myList = "My List"
+  }
+
+  return (
     <ModalPortal>
       <Background>
         <Content>
           <ImageThumbnail style={{
             background: `linear-gradient(to top, #111 0%, transparent 70%), url(${lecture.img})`,
             backgroundSize: 'cover',
-            backgroundRepeat : 'no-repeat',
+            backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center'
-            }}>
+          }}>
           </ImageThumbnail>
-            <ContentInfo>
+          <ContentInfo>
             <CloseBtn className="featured--myCloseButton" onClick={onClose}>X</CloseBtn>
             <ButtonLeft>
-            <div className="featured--buttons">
-              <a className="featured--watchButton" href={`/homescreen`}>♥</a>
-              <a className="featured--myListButton" href={`/homescreen`}>+ My List</a>
-            </div>
+              <div className="featured--buttons">
+                <a className="featured--watchButton" href='#'
+                  onClick={() => onPlusFavorite(lecture.title)}>{favorite}</a>
+                <a className="featured--myListButton" href='#'
+                  onClick={() => onPlusMyList(lecture.title)} >{myList}</a>
+              </div>
             </ButtonLeft>
             <Title>
               <Left>{title}</Left>
@@ -44,12 +58,13 @@ const Modal = ({onClose, lecture}) => {
         </Content>
       </Background>
     </ModalPortal>
-  );};
-  
-  // export module
-  export default Modal;
+  );
+};
 
-  const Background = styled.div`
+// export module
+export default Modal;
+
+const Background = styled.div`
   position: fixed;
   left: 0;
   top: 0;
@@ -154,14 +169,13 @@ const ContentDetailRight = styled(Right.withComponent("div"))`
 
 const CloseBtn = styled.button`
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
   z-index: 999;
   font-size: 30px;
   font-weight: bold;
   cursor: pointer;
   color: white;
   background: #141414
-
 `;
 

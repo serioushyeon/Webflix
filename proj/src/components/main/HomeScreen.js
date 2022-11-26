@@ -7,14 +7,38 @@ import '../style/HomeScreen.css';
 
 const HomeScreen = () => {
     const [bannerLecture, setBannerLectrue] = useState(Data[0]);
-    const [favoriteList, setFavoriteList] = useState(Data);
+    const [MyList, setMyList] = useState(Data);
     const [voteTopList, setVoteTopList] = useState(Data);
     const [majorList, setMajorList] = useState(Data);
     const [generalList, setGeneralList] = useState(Data);
-    
+
+    const onChangefavorite = (title) => {
+        let lecture = Data.find(lecture => lecture.title === title);
+        lecture.favorite ? lecture.vote_average-- : lecture.vote_average++;
+        lecture.favorite = !lecture.favorite;
+        let list = Data.filter((lecture) => lecture.vote_average >= 50);
+        setVoteTopList(list);
+        setBannerLectrue(lecture);
+        console.log(lecture.title + " "+ lecture.favorite);
+    }
+
+    const onChagneMyList = (title) => {
+        let lecture = Data.find(lecture => lecture.title === title);
+        lecture.myList = !lecture.myList;
+        let list = Data.filter((lecture) => lecture.myList === true)
+        setMyList(list);
+        setBannerLectrue(lecture);
+        console.log(lecture.title + " "+ lecture.myList);
+    }
+
     useEffect(() => {
-        let list = Data.filter((lecture) => lecture.favorite === true);
-        setFavoriteList(list);
+        let choosen = Math.floor(Math.random() * 12);
+        setBannerLectrue(Data[choosen]);
+    },[])
+
+    useEffect(() => {
+        let list = Data.filter((lecture) => lecture.myList === true);
+        setMyList(list);
     }, []);
 
     useEffect(() => {
@@ -32,22 +56,18 @@ const HomeScreen = () => {
         setGeneralList(list);
     }, []);
 
-    useEffect(() => {
-        let choosen = Math.floor(Math.random() * 12);
-        setBannerLectrue(Data[choosen]);
-    }, []);
-
-    return (
+    return ( 
         <div className='homeScreen'>
             <Nav />
             <div className='banner'>
-                <Banner item={bannerLecture} />
+                <Banner item={bannerLecture}
+                onPlusMyList={() => onChagneMyList(bannerLecture.title)} />
             </div>
             <section className='lists'>
-                <Lecture title={"내가 찜한 콘텐츠"} items = {favoriteList} />
-                <Lecture title={"추천 강의"} items={voteTopList} />
-                <Lecture title={"전공 강의"} items={majorList} />
-                <Lecture title={"교양 강의"} items={generalList} />
+                <Lecture title={"추천 강의"} items={voteTopList} onPlusFavorite={onChangefavorite} onPlusMyList={onChagneMyList}/>
+                <Lecture title={"내가 찜한 콘텐츠"} items = {MyList} onPlusFavorite={onChangefavorite} onPlusMyList={onChagneMyList}/>
+                <Lecture title={"전공 강의"} items={majorList} onPlusFavorite={onChangefavorite} onPlusMyList={onChagneMyList}/>
+                <Lecture title={"교양 강의"} items={generalList} onPlusFavorite={onChangefavorite} onPlusMyList={onChagneMyList}/>
             </section>
             <footer>
                 Lecture introduction homepage ❤️ Webflix By <strong><a href="https://github.com/seriouhyeon/Webflix" target="_blank">Reaction</a></strong><br />
