@@ -43,7 +43,7 @@ const Data = [
         section: "major",
         credit: "3학점",
         grade: "3학년",
-        favorite: false,
+        favorite: true,
 
     },
     {

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import {useLocation, Link} from "react-router-dom"
-import webflixLogo from './webflix logo.png';
-import background from './background.jpg';
 //import idpws from './idpw'
 import login, { idpws } from './Login'
 
@@ -78,13 +76,6 @@ export default function Signup() {
       }
     };
     const onClickConfirmButton = () => {
-      // User.email = email;
-      // User.pw = pw;
-      // if(email === User.email && pw === User.pw) {
-      //   alert('로그인에 성공했습니다.' + User.email + ", " + User.pw)
-      // } else {
-      //   alert("등록되지 않은 회원입니다.");
-      // }
       alert("회원가입 성공, name: " + name + ", email: " + email + ", pw: " + pw);
       idpws.push({"email": email, "pw": pw, "name": name})
       console.log(idpws);

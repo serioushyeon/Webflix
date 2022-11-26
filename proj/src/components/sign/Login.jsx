@@ -1,15 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import {useLocation, Link} from "react-router-dom"
-import webflixLogo from './webflix logo.png';
-import background from './background.jpg';
-import App from './App';
-
-//import idpws from './idpw'
-
-// const User = {
-//   email: 'test@example.com',
-//   pw: 'test2323@@@'
-// }
 
 export const idpws = [
   {
@@ -61,25 +51,18 @@ export default function Login() {
       }
     };
     const onClickConfirmButton = () => {
-      for (var i = 0; i<idpws.length; i++) {
+      for (let i = 0; i<idpws.length; i++) {
         if (email === idpws[i].email && pw === idpws[i].pw) {
           alert(idpws[i].name + "님 환영합니다.");
-          break;
+          location.href = "http://localhost:3000/homescreen"
         }
       }
-      if (i >= idpws.length){
+      if (i > idpws.length){
         alert("등록되지 않은 회원입니다.");
       }
-
-      // if(email === User.email && pw === User.pw) {
-      //   alert('로그인에 성공했습니다.')
-      // } else {
-      //   alert("등록되지 않은 회원입니다.");
-      // }
     }
 
     return (
-      //<div className="background" style={{background: netflix_background}}>
       
       <div>
         <img className="background" src="img/background.jpg" style={{ opacity : "0.5"}}alt="Wetflix_background"></img>
@@ -133,7 +116,7 @@ export default function Login() {
 
           <div>
             <button onClick={onClickConfirmButton} disabled={notAllow} className="signinButton">
-              확인
+              로그인
             </button>
           </div>
           {/* 회원가입 버튼 */}
