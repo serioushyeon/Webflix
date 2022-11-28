@@ -42,6 +42,10 @@ const Search = () => {
                 </div>
             </header>
 
+            <div className="no-search-results">
+                {search == '' && <img src="img/background.jpg" style={{ opacity : "0.5"}} width="100%"/>}
+            </div>
+
             <div className="search-results">
                 <div className="img-table">
                     <table className="table">

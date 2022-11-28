@@ -53,7 +53,7 @@
 }
 
 .featured--watchButton,
-.featured--myListButton {
+.featured--favoriteButton {
     display: inline-block;
     font-size: 20px;
     font-weight: bold;
@@ -65,7 +65,7 @@
     transition: 0.3s all ease;
 }
 .featured--watchButton:hover,
-.featured--myListButton:hover {
+.featured--favoriteButton:hover {
     opacity: 0.7;
 }
 
@@ -74,9 +74,9 @@
     color: #000;
 }
 
-.featured--myListButton {
-    background-color: #333;
+.featured--favoriteButton {
     color: #FFF;
+    background-color: #333;
 }
 
 .featured--track {
@@ -105,7 +105,7 @@
     }
 
     .featured--watchButton, 
-    .featured--myListButton{
+    .featured--favoriteButton{
         font-size: 16px;
     }
 

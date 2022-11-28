@@ -2,9 +2,13 @@
     text-align: center;
 }
 
+.no-search-results {
+    padding-top: 50px;
+}
+
 .img-table {
     display: inline-block;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 .table {

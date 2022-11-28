@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import '../style/Banner.css';
 
-const Banner = ({item}) => {
-
-    let firstDate = new Date(item.first_air_date);
+const Banner = ({item, onPlusMyList = f => f}) => {
 
     let description = item.description;
+    let myList = "+ My List"
+
+    if(item.myList) {
+        myList = "My List"
+    }
+
     if(description.length > 100) {
         description = description.substring(0, 100)+'...';
     }
@@ -25,8 +29,9 @@ const Banner = ({item}) => {
                     </div>
                     <div className="featured--description">{description}</div>
                     <div className="featured--buttons">
-                        <a className="featured--watchButton" href={`/homescreen`}>▶ Play</a>
-                        <a className="featured--myListButton" href={`/homescreen`}>+ My List</a>
+                        <a className="featured--watchButton" href='#' >▶ Play</a>
+                        <a className="featured--favoriteButton"href='#' 
+                        onClick={onPlusMyList} >{myList}</a>
                     </div>
                     <div className="featured--track"><strong>track: </strong>{item.track}</div>
                 </div>

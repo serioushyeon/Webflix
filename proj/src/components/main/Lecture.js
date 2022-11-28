@@ -4,7 +4,7 @@ import Modal from './Modal';
 import ModalPortal from "./Portal";
 
 
-const Lecture = ({ title, items }) => {
+const Lecture = ({ title, items, onPlusFavorite = f => f, onPlusMyList = f => f}) => {
     const [modalOn, setModalOn] = useState(false);
     const [currentLecture, setCurrnetLecture] = useState();
     const [scrollX, setScrollX] = useState(0);
@@ -51,7 +51,7 @@ const Lecture = ({ title, items }) => {
                 </div>
             </div>
             <ModalPortal>
-                {modalOn && <Modal onClose={handleModal} lecture={currentLecture}/>}
+                {modalOn && <Modal onClose={handleModal} lecture={currentLecture} onPlusFavorite={onPlusFavorite} onPlusMyList={onPlusMyList}/>}
             </ModalPortal>
         </div>
 
