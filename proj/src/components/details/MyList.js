@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "../style/MyList.css"
 import Data from '../main/Data'
+import Nav from '../main/Nav'
 
 const MyList = () => {
     const [myLectures, setmyLectures] = useState(Data);
@@ -18,7 +19,7 @@ const MyList = () => {
             if (Data[i].myList) {
                 count++
                 result.push(<td><img src={Data[i].img} /></td>);
-                if (count%6 == 0) {
+                if (count%5 == 0) {
                     result.push(<tr></tr>);
                 }
                 

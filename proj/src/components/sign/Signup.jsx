@@ -103,6 +103,7 @@ export default function Signup() {
                 placeholder="test@gmail.com"
                 value={email}
                 onChange={handleEmail}
+                style = {{ color: "black" }}
               />
             </div>
             <div className="errorMessageWrap">
@@ -121,6 +122,7 @@ export default function Signup() {
                 value={name}
                 placeholder="2자 이상"
                 onChange={handleName}
+                style = {{ color: "black" }}
               />
             </div>
             <div className="errorMessageWrap">
@@ -140,6 +142,7 @@ export default function Signup() {
                 placeholder="영문, 숫자, 특수문자 포함 8자 이상"
                 value={pw}
                 onChange={handlePw}
+                style = {{ color: "black" }}
               />
             </div>
             <div className="errorMessageWrap">
@@ -158,6 +161,7 @@ export default function Signup() {
                 placeholder="영문, 숫자, 특수문자 포함 8자 이상"
                 value={pwConfirm}
                 onChange={handlePwConfirm}
+                style = {{ color: "black" }}
               />
             </div>
           </div>
@@ -167,7 +171,7 @@ export default function Signup() {
             <button className="signupButton" style={{float: "left"}}>
               <Link to="/" style={{ textDecoration: "none", color: "white"}}>로그인</Link>
             </button>
-            <button onClick={onClickConfirmButton} disabled={notAllow} className="signupButton" style={{float: "right"}}>
+            <button onClick={onClickConfirmButton} disabled={notAllow} className="signupButton" style={{float: "left"}}>
               회원가입하기
             </button>
           </div>
