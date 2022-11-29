@@ -1,4 +1,4 @@
-#WF1-7-Reaction-Webflix
+# WF1-7-Reaction-Webflix
 
 개발 환경: Visual Studio Code
 
