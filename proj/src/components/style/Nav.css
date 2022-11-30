@@ -1,0 +1,77 @@
+header {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    transition: 0.5s all ease;
+}
+
+.header--logo {
+    height: 40px;
+    margin-top: px;
+    margin-left: 20px;
+    margin-right: 50px;
+}
+.header--logo img {
+    height: 100%;
+}
+
+.header--user {
+    position: absolute;
+    margin-left: 96%;
+    height: 35px;
+}
+
+.header--user img {
+    height: 100%;
+    border-radius: 3px;
+}
+
+.search-window {
+    border: 1.5px solid #141414;
+    background-color: #141414;
+    width: 225px;
+    display: inline-block;
+    margin-left: 81%;
+    padding: 5px;
+    position: absolute;
+}
+
+i, input {
+    color: white;
+    display: inline;
+}
+
+input:focus {
+    outline: none;
+}
+
+#search {
+    background-color: #141414;;
+    border: 0px solid #141414;
+    width: 166px;
+}
+
+#search-icon {
+    padding: 4px;
+}
+
+#delete-icon {
+    position: absolute;
+    padding: 3px;
+    top: 2.5px;
+    left: 170px;
+}
+
+.header--link {
+    width: 310px;
+}
+
+a {
+    padding: 10px;
+}

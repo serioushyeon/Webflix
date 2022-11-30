@@ -1,0 +1,71 @@
+.lectureRow {
+    margin-bottom: 30px;
+}
+
+.lectureRow h2 {
+    margin: 0px 0px 0px 30px;
+}
+
+.lectureRow--listarea {
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+
+.lectureRow--list {
+    width: 9999px;
+    transition: all ease 0.3s;
+}
+.lectureRow--item {
+    display: inline-block;
+    width: 200px;
+    cursor: pointer;
+}
+
+.lectureRow--item img {
+    width: 100%;
+    transform: scale(0.93);
+    transition: 0.3s all ease;
+}
+
+.lectureRow--item img:hover {
+    transform: scale(1);
+}
+
+.lectureRow--left,
+.lectureRow--right {
+    position: absolute;
+    width: 35px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+
+.lectureRow:hover .lectureRow--left, 
+.lectureRow:hover .lectureRow--right {
+    opacity: 1;
+}
+
+.lectureRow--left {
+    left: 0;
+}
+
+.lectureRow--right {
+    right: 0;
+}
+
+@media (max-width:760px){
+    .lectureRow--left,
+    .lectureRow--right {
+        opacity: 1;
+    }
+
+    .lectureRow--right{
+        margin-right: 1vh;
+    }
+}
