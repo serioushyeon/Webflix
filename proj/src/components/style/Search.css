@@ -1,0 +1,16 @@
+.search-results {
+    text-align: center;
+}
+
+.no-search-results {
+    padding-top: 50px;
+}
+
+.img-table {
+    display: inline-block;
+    padding-top: 80px;
+}
+
+.table {
+    border-spacing: 30px 35px;
+}

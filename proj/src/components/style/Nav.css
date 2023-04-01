@@ -62,7 +62,10 @@ input:focus {
 }
 
 #delete-icon {
+    position: absolute;
     padding: 3px;
+    top: 2.5px;
+    left: 170px;
 }
 
 .header--link {
