@@ -1,3 +1,21 @@
+# Webflix
+
+<h1 align="center"><strong> 🎞 웹플릭스 🎞 </h1>
+
+<h3 align="center">✨웹프레임워크 프론트엔드 프로젝트입니다✨</a></strong></h3>
+
+<br>
+
+<h3 align="center"> 🎈 아이디어 소개 🎈 </h3>
+
+<div align="center">
+React를 활용한 한성대학교 강의 추천 웹사이트로, 넷플릭스를 클론 코딩하여 제작하였습니다. <br><br><br>
+</div>
+
+<div align="center">
+  <img src = "https://github.com/serioushyeon/Webflix/assets/108039053/7f869b8f-a66c-4089-9a54-2b1e85f62478.gif" width="400"/><br><br>
+</div>
+
 # WF1-7-Reaction-Webflix
 
 - 개발 환경: Visual Studio Code
